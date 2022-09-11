@@ -189,7 +189,7 @@
     }
   </style>
 
-  <script type="text/javascript"/>
+  <script>
     function go_about_me(){
       document.getElementByID("about_me").style.display = "block";
       document.getElementByID("skills").style.display = "none";
@@ -200,6 +200,7 @@
     }
 
     function go_skills(){
+      alert("This button works!");  
       document.getElementByID("about_me").style.display = "none";
       document.getElementByID("skills").style.display = "block";
       document.getElementByID("awards").style.display = "none";
