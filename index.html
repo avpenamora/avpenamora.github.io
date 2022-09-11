@@ -4,10 +4,235 @@
   <title> Aidee Criselle Peñamora</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+  <script>
+    function go_about_me(){
+      document.getElementByID("about_me").style.display = "block";
+      document.getElementByID("skills").style.display = "none";
+      document.getElementByID("awards").style.display = "none";
+      document.getElementByID("exp").style.display = "none";
+      document.getElementByID("projects").style.display = "none";
+      document.getElementByID("aff").style.display = "none";
+    }
+
+    function go_skills(){
+      document.getElementByID("about_me").style.display = "none";
+      document.getElementByID("skills").style.display = "block";
+      document.getElementByID("awards").style.display = "none";
+      document.getElementByID("exp").style.display = "none";
+      document.getElementByID("projects").style.display = "none";
+      document.getElementByID("aff").style.display = "none";
+    }
+
+    function go_awards(){
+      document.getElementByID("about_me").style.display = "none";
+      document.getElementByID("skills").style.display = "none";
+      document.getElementByID("awards").style.display = "block";
+      document.getElementByID("exp").style.display = "none";
+      document.getElementByID("projects").style.display = "none";
+      document.getElementByID("aff").style.display = "none";
+    }
+
+    function go_exp(){
+      document.getElementByID("about_me").style.display = "none";
+      document.getElementByID("skills").style.display = "none";
+      document.getElementByID("awards").style.display = "none";
+      document.getElementByID("exp").style.display = "block";
+      document.getElementByID("projects").style.display = "none";
+      document.getElementByID("aff").style.display = "none";
+    }
+
+    function go_projects(){
+      document.getElementByID("about_me").style.display = "none";
+      document.getElementByID("skills").style.display = "none";
+      document.getElementByID("awards").style.display = "none";
+      document.getElementByID("exp").style.display = "none";
+      document.getElementByID("projects").style.display = "block";
+      document.getElementByID("aff").style.display = "none";
+    }
+
+    function go_aff(){
+      document.getElementByID("about_me").style.display = "none";
+      document.getElementByID("skills").style.display = "none";
+      document.getElementByID("awards").style.display = "none";
+      document.getElementByID("exp").style.display = "none";
+      document.getElementByID("projects").style.display = "none";
+      document.getElementByID("aff").style.display = "block";
+    }
+  </script>
 
   <style>
     {% load static %}
 
+    @media only screen and (max-width: 640){
+
+    }
+
+    @media only screen and (min-width: 641){
+      body {
+        background-color:#0c2337;
+      }
+
+      div.content{
+        position: absolute;
+        height: 60%;
+        width: 30%;
+        top:20%;
+        left:17%;
+        background-color:#cdc5b7;
+        overflow:hidden;
+      }
+
+      p.headd{
+        float:left;
+        width: 80%;
+        margin-bottom:0%;
+        margin-left:10%;
+        color:#0c2337;
+        text-align:center;
+        font-family: Helvetica, Garamond;
+        font-size: 150%;
+        font-weight: bold;
+      }
+
+      p.subheadd{
+        float:left;
+        width: 80%;
+        margin-bottom:0%;
+        margin-left:10%;
+        color:#0c2337;
+        text-align:left;
+        font-family: Helvetica, Garamond;
+        font-size: 100%;
+        text-decoration: underline;
+      }
+
+      p, li{
+        float:left;
+        width: 80%;
+        margin-bottom:0%;
+        margin-left:10%;
+        color:#000000;
+        text-align:left;
+        font-family: Helvetica, Garamond;
+        font-size: 70%;
+      }
+
+      div.about_me{
+        display: block;
+        position: relative;
+        top: 5%;
+      }
+
+      div.skills{
+        display:none;
+        position: relative;
+        top: 5%;
+      }
+
+      div.awards{
+        display:none;
+        position: relative;
+        top: 5%;
+      }
+
+      div.exp{
+        display:none;
+        position: relative;
+        top: 5%;
+      }
+
+      div.projects{
+        display:none;
+        position: relative;
+        top: 18%;
+      }
+
+      div.aff{
+        display:none;
+        position: relative;
+        top: 5%;
+      }
+
+      div.right_block{
+        position: absolute;
+        height: 60%;
+        width: 30%;
+        top: 20%;
+        left: 53%;
+        text-align: center;
+        color: #ffffff;
+        font-family: Helvetica, Garamond;
+      }
+
+      h1{
+        float:left;
+        margin-top:3%;
+        color:#ffffff;
+        text-align:center;
+        font-family: Helvetica, Garamond;
+        font-size: 300%;
+      }
+
+      button{
+        color: #0c2337;
+        background-color:#cdc5b7;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 40%;
+        border: none;
+        text-align: center;
+        font-family: Helvetica, Garamond;
+        text-decoration: none;
+        font-size: 80%;
+      }
+
+      button.button1{
+        float:left;
+        margin-top: 0%;
+        margin-left:7%;
+      }
+
+      button.button2{
+        float:right;
+        margin-top: 0%;
+        margin-right: 7%;
+      }
+
+      button.button3{
+        float:left;
+        margin-top: 5%;
+        margin-left:7%;
+      }
+
+      button.button4{
+        float:right;
+        margin-top: 5%;
+        margin-right: 7%;
+      }
+
+      button.button5{
+        float:left;
+        margin-top: 5%;
+        margin-left:7%;
+        margin-bottom: 10%;
+      }
+
+      button.button6{
+        float:right;
+        margin-top: 5%;
+        margin-right: 7%;
+        margin-bottom: 10%;
+      }
+
+      a.github, p.email{
+        color:#ffffff;
+        text-decoration: none;
+        font-size: 80%;
+        text-align:center;
+      }
+    }
 
 
   </style>
@@ -42,7 +267,7 @@
       <ul>
         <li>1st Sem, 2016-2017</li>
         <li>2nd Sem, 2016-2017</li>
-        <li>1st Sem, 2017-2018<li>
+        <li>1st Sem, 2017-2018</li>
         <li>2nd Sem, 2020-2021</li>
       </ul>
     </div>
@@ -71,18 +296,20 @@
     </div>
   </div>
 
-  <h1>Aidee Criselle Peñamora</h1>
+  <div class="right_block">
+    <h1>Aidee Criselle Peñamora</h1>
 
-  <div class ="buttons" onselectstart="false">
-    <p class = "button1">About Me</p>
-    <p class = "button2">Skills</p>
-    <p class = "button3">Awards</p>
-    <p class = "button4">Experience</p>
-    <p class = "button5">Projects</p>
-    <p class = "button6">Affiliations</p>
+    <div class ="buttons" onselectstart="false">
+      <button onclick="go_about_me()" class = "button1">About Me</button>
+      <button onclick="go_skills()" class = "button2">Skills</button>
+      <button onclick="go_awards()" class = "button3">Awards</button>
+      <button onclick="go_exp()" class = "button4">Experience</button>
+      <button onclick="go_projects()" class = "button5">Projects</button>
+      <button onclick="go_aff()" class = "button6">Affiliations</button>
+    </div>
+
+    <a href = "https://github.com/avpenamora" class = "github"> github.com/avpenamora</a>
+    <p class="email">Email me at aideecrisellep@gmail.com</p>
   </div>
-
-  <a href = "https://github.com/avpenamora" class = "github"> github.com/avpenamora</a>
-  <p class="email">Email me at aideecrisellep@gmail.com</p>
 </body>
 </html>
