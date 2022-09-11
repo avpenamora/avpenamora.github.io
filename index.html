@@ -66,8 +66,183 @@
   <style>
     {% load static %}
 
-    @media screen and (max-width: 640){
+    @media screen and (max-width: 640px){
+      body{
+        color: #ffffff;
+      }
 
+      div.right_block{
+        position: absolute;
+        height: 30%;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        text-align: center;
+        font-family: Helvetica, Garamond;
+        background-color:#0c2337;
+        overflow:auto;
+      }
+
+      h1{
+        float:left;
+        width:100%;
+        margin-top:3%;
+        color:#ffffff;
+        text-align:center;
+        font-family: Helvetica, Garamond;
+        font-size: 150%;
+      }
+
+      div.linkk{
+        float:left;
+        width:100%;
+        margin-top: -5%;
+        color:#ffffff;
+        text-decoration: none;
+        font-size: 70%;
+        text-align:center;
+        line-height:50%;
+      }
+      a.github, p.email{
+        margin-bottom:0%;
+        color:#ffffff;
+        text-align:center;
+      }
+
+      div.buttons{
+        float:left;
+        width:100%;
+        margin-top: -1%;
+        margin-bottom:10%;
+      }
+
+      button{
+        color: #0c2337;
+        background-color:#cdc5b7;
+        padding:5px;
+        width: 40%;
+        border: none;
+        text-align: center;
+        font-family: Helvetica, Garamond;
+        text-decoration: none;
+        font-size: 70%;
+      }
+
+      button.button1{
+        float:left;
+        margin-top: 0%;
+        margin-left:7%;
+      }
+
+      button.button2{
+        float:right;
+        margin-top: 0%;
+        margin-right: 7%;
+      }
+
+      button.button3{
+        float:left;
+        margin-top: 5%;
+        margin-left:7%;
+      }
+
+      button.button4{
+        float:right;
+        margin-top: 5%;
+        margin-right: 7%;
+      }
+
+      button.button5{
+        float:left;
+        margin-top: 5%;
+        margin-left:7%;
+      }
+
+      button.button6{
+        float:right;
+        margin-top: 5%;
+        margin-right: 7%;
+      }
+
+      div.content{
+        position: absolute;
+        height: 70%;
+        width: 100%;
+        top:30%;
+        left:0%;
+        overflow:auto;
+      }
+
+      p.headd{
+        float:left;
+        width: 80%;
+        margin-bottom:0%;
+        margin-left:10%;
+        color:#0c2337;
+        text-align:center;
+        font-family: Helvetica, Garamond;
+        font-size: 150%;
+        font-weight: bold;
+      }
+
+      p.subheadd{
+        float:left;
+        width: 80%;
+        margin-bottom:0%;
+        margin-left:10%;
+        color:#0c2337;
+        text-align:left;
+        font-family: Helvetica, Garamond;
+        font-size: 100%;
+        text-decoration: underline;
+      }
+
+      p, li{
+        float:left;
+        width: 80%;
+        margin-bottom:0%;
+        margin-left:10%;
+        color:#000000;
+        text-align:left;
+        font-family: Helvetica, Garamond;
+        font-size: 70%;
+      }
+
+      div.about_me{
+        display:  block;
+        position: relative;
+        top: 5%;
+      }
+
+      div.skills{
+        display:none;
+        position: relative;
+        top: 5%;
+      }
+
+      div.awards{
+        display:none;
+        position: relative;
+        top: 5%;
+      }
+
+      div.exp{
+        display:none;
+        position: relative;
+        top: 5%;
+      }
+
+      div.projects{
+        display:none;
+        position: relative;
+        top: 18%;
+      }
+
+      div.aff{
+        display:none;
+        position: relative;
+        top: 5%;
+      }
     }
 
     @media screen and (min-width: 641px){
@@ -320,8 +495,10 @@
       <button onclick="go_aff()" class = "button6">Affiliations</button>
     </div>
 
-    <a href = "https://github.com/avpenamora" class = "github"> github.com/avpenamora</a>
-    <p class="email">Email me at aideecrisellep@gmail.com</p>
+    <div class="linkk">
+      <a href = "https://github.com/avpenamora" class = "github"> github.com/avpenamora</a>
+      <p class="email">Email me at aideecrisellep@gmail.com</p>
+    </div>
   </div>
 </body>
 </html>
