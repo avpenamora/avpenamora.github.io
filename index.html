@@ -119,17 +119,29 @@
         font-size: 300%;
       }
 
+      div.buttons{
+        float:left;
+        margin-top: 0%;
+        margin-bottom:10%;
+      }
+
       button{
         color: #0c2337;
         background-color:#cdc5b7;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding:10px;
         width: 40%;
         border: none;
         text-align: center;
         font-family: Helvetica, Garamond;
         text-decoration: none;
         font-size: 80%;
+      }
+      button:hover{
+        color:#ffffff;
+        background-color:#0c2337;
+        padding:9px;
+        border: solid 1px;
+        border-color:#ffffff;
       }
 
       button.button1{
@@ -160,14 +172,12 @@
         float:left;
         margin-top: 5%;
         margin-left:7%;
-        margin-bottom: 10%;
       }
 
       button.button6{
         float:right;
         margin-top: 5%;
         margin-right: 7%;
-        margin-bottom: 10%;
       }
 
       a.github, p.email{
@@ -179,7 +189,7 @@
     }
   </style>
 
-  <script>
+  <script type="text/javascript"/>
     function go_about_me(){
       document.getElementByID("about_me").style.display = "block";
       document.getElementByID("skills").style.display = "none";
@@ -239,13 +249,13 @@
 
 <body>
   <div class="content" onselectstart="false">
-    <div class="about_me">
+    <div class="about_me" id="about_me">
       <p class="headd">Profile</p>
       <p>A hardworking fresh graduate who is passionate with work and has both the social skills, as exhibited in the different student organizations joined while taking undergraduate education, as well as the technical skills, such as proficiency in different programming languages</p>
       <p class="headd">Education</p>
       <p>BS Computer Engineering<br/>University of the Philippines Diliman, Quezon City<br/>August 2016-August 2022
     </div>
-    <div class="skills">
+    <div class="skills" id="skills">
       <p class="headd">Skills</p>
       <ul>
         <li>Proficient in HTML, CSS, and Javascript</li>
@@ -256,7 +266,7 @@
         <li>Effective Time Management</li>
       </ul>
     </div>
-    <div class="awards">
+    <div class="awards" id="awards">
       <p class="headd">Awards</p>
       <p class="subheadd">University Scholar</p>
       <ul>
@@ -270,16 +280,16 @@
         <li>2nd Sem, 2020-2021</li>
       </ul>
     </div>
-    <div class="exp">
+    <div class="exp" id="exp">
       <p class="headd">Employment History</p>
       <p class="subheadd"> Student Assistant(EEE 121), UP Diliman, Quezon City</p>
       <p>Served as a student assistant for a programming class focused on object oriented programming and algorithms. Responsible for checking the attendance, answering questions of students relevant to the subject, checking submitted codes and giving appropriate grades and feedback to the students within a given time frame</p>
     </div>
-    <div class="projects">
+    <div class="projects" id="projects">
       <p class="headd">Projects</p>
       <p>TBA.</p>
     </div>
-    <div class="aff">
+    <div class="aff" id="aff">
       <p class="headd">Affiliations</p>
       <ul>
         <li>UP Programming Guild</li>
