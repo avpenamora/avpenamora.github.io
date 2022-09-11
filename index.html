@@ -3,6 +3,63 @@
 <head>
   <title> Aidee Criselle Peñamora</title>
 
+  <script>
+    function go_about_me(){
+      document.getElementById("about_me").style.display = "block";
+      document.getElementById("skills").style.display = "none";
+      document.getElementById("awards").style.display = "none";
+      document.getElementById("exp").style.display = "none";
+      document.getElementById("projects").style.display = "none";
+      document.getElementById("aff").style.display = "none";
+    }
+
+    function go_skills(){
+      document.getElementById("about_me").style.display = "none";
+      document.getElementById("skills").style.display = "block";
+      document.getElementById("awards").style.display = "none";
+      document.getElementById("exp").style.display = "none";
+      document.getElementById("projects").style.display = "none";
+      document.getElementById("aff").style.display = "none";
+    }
+
+    function go_awards(){
+      document.getElementById("about_me").style.display = "none";
+      document.getElementById("skills").style.display = "none";
+      document.getElementById("awards").style.display = "block";
+      document.getElementById("exp").style.display = "none";
+      document.getElementById("projects").style.display = "none";
+      document.getElementById("aff").style.display = "none";
+    }
+
+    function go_exp(){
+      document.getElementById("about_me").style.display = "none";
+      document.getElementById("skills").style.display = "none";
+      document.getElementById("awards").style.display = "none";
+      document.getElementById("exp").style.display = "block";
+      document.getElementById("projects").style.display = "none";
+      document.getElementById("aff").style.display = "none";
+    }
+
+    function go_projects(){
+      document.getElementById("about_me").style.display = "none";
+      document.getElementById("skills").style.display = "none";
+      document.getElementById("awards").style.display = "none";
+      document.getElementById("exp").style.display = "none";
+      document.getElementById("projects").style.display = "block";
+      document.getElementById("aff").style.display = "none";
+    }
+
+    function go_aff(){
+      document.getElementById("about_me").style.display = "none";
+      document.getElementById("skills").style.display = "none";
+      document.getElementById("awards").style.display = "none";
+      document.getElementById("exp").style.display = "none";
+      document.getElementById("projects").style.display = "none";
+      document.getElementById("aff").style.display = "block";
+    }
+  </script>
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
@@ -64,7 +121,7 @@
       }
 
       div.about_me{
-        display: block;
+        display:  block;
         position: relative;
         top: 5%;
       }
@@ -186,70 +243,15 @@
         font-size: 80%;
         text-align:center;
       }
+      a.github:hover{
+        text-decoration: underline;
+      }
     }
   </style>
-
-  <script>
-    function go_about_me(){
-      document.getElementByID("about_me").style.display = "block";
-      document.getElementByID("skills").style.display = "none";
-      document.getElementByID("awards").style.display = "none";
-      document.getElementByID("exp").style.display = "none";
-      document.getElementByID("projects").style.display = "none";
-      document.getElementByID("aff").style.display = "none";
-    }
-
-    function go_skills(){
-      alert("This button works!");  
-      document.getElementByID("about_me").style.display = "none";
-      document.getElementByID("skills").style.display = "block";
-      document.getElementByID("awards").style.display = "none";
-      document.getElementByID("exp").style.display = "none";
-      document.getElementByID("projects").style.display = "none";
-      document.getElementByID("aff").style.display = "none";
-    }
-
-    function go_awards(){
-      document.getElementByID("about_me").style.display = "none";
-      document.getElementByID("skills").style.display = "none";
-      document.getElementByID("awards").style.display = "block";
-      document.getElementByID("exp").style.display = "none";
-      document.getElementByID("projects").style.display = "none";
-      document.getElementByID("aff").style.display = "none";
-    }
-
-    function go_exp(){
-      document.getElementByID("about_me").style.display = "none";
-      document.getElementByID("skills").style.display = "none";
-      document.getElementByID("awards").style.display = "none";
-      document.getElementByID("exp").style.display = "block";
-      document.getElementByID("projects").style.display = "none";
-      document.getElementByID("aff").style.display = "none";
-    }
-
-    function go_projects(){
-      document.getElementByID("about_me").style.display = "none";
-      document.getElementByID("skills").style.display = "none";
-      document.getElementByID("awards").style.display = "none";
-      document.getElementByID("exp").style.display = "none";
-      document.getElementByID("projects").style.display = "block";
-      document.getElementByID("aff").style.display = "none";
-    }
-
-    function go_aff(){
-      document.getElementByID("about_me").style.display = "none";
-      document.getElementByID("skills").style.display = "none";
-      document.getElementByID("awards").style.display = "none";
-      document.getElementByID("exp").style.display = "none";
-      document.getElementByID("projects").style.display = "none";
-      document.getElementByID("aff").style.display = "block";
-    }
-  </script>
-
 </head>
 
 <body>
-  <div class="content" onselectstart="false">
+  <div class="content" onselectstart="return false">
     <div class="about_me" id="about_me">
       <p class="headd">Profile</p>
       <p>A hardworking fresh graduate who is passionate with work and has both the social skills, as exhibited in the different student organizations joined while taking undergraduate education, as well as the technical skills, such as proficiency in different programming languages</p>
@@ -307,9 +309,9 @@
   </div>
 
   <div class="right_block">
-    <h1>Aidee Criselle Peñamora</h1>
+    <h1 onselectstart = "return false">Aidee Criselle Peñamora</h1>
 
-    <div class ="buttons" onselectstart="false">
+    <div class ="buttons" onselectstart="return false">
       <button onclick="go_about_me()" class = "button1">About Me</button>
       <button onclick="go_skills()" class = "button2">Skills</button>
       <button onclick="go_awards()" class = "button3">Awards</button>
