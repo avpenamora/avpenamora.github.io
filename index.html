@@ -7,7 +7,7 @@
     function go_about_me(){
       document.getElementById("about_me").style.display = "block";
       document.getElementById("skills").style.display = "none";
-      document.getElementById("awards").style.display = "none";
+      document.getElementById("courses").style.display = "none";
       document.getElementById("exp").style.display = "none";
       document.getElementById("projects").style.display = "none";
       document.getElementById("aff").style.display = "none";
@@ -16,16 +16,16 @@
     function go_skills(){
       document.getElementById("about_me").style.display = "none";
       document.getElementById("skills").style.display = "block";
-      document.getElementById("awards").style.display = "none";
+      document.getElementById("courses").style.display = "none";
       document.getElementById("exp").style.display = "none";
       document.getElementById("projects").style.display = "none";
       document.getElementById("aff").style.display = "none";
     }
 
-    function go_awards(){
+    function go_courses(){
       document.getElementById("about_me").style.display = "none";
       document.getElementById("skills").style.display = "none";
-      document.getElementById("awards").style.display = "block";
+      document.getElementById("courses").style.display = "block";
       document.getElementById("exp").style.display = "none";
       document.getElementById("projects").style.display = "none";
       document.getElementById("aff").style.display = "none";
@@ -34,7 +34,7 @@
     function go_exp(){
       document.getElementById("about_me").style.display = "none";
       document.getElementById("skills").style.display = "none";
-      document.getElementById("awards").style.display = "none";
+      document.getElementById("courses").style.display = "none";
       document.getElementById("exp").style.display = "block";
       document.getElementById("projects").style.display = "none";
       document.getElementById("aff").style.display = "none";
@@ -43,7 +43,7 @@
     function go_projects(){
       document.getElementById("about_me").style.display = "none";
       document.getElementById("skills").style.display = "none";
-      document.getElementById("awards").style.display = "none";
+      document.getElementById("courses").style.display = "none";
       document.getElementById("exp").style.display = "none";
       document.getElementById("projects").style.display = "block";
       document.getElementById("aff").style.display = "none";
@@ -52,7 +52,7 @@
     function go_aff(){
       document.getElementById("about_me").style.display = "none";
       document.getElementById("skills").style.display = "none";
-      document.getElementById("awards").style.display = "none";
+      document.getElementById("courses").style.display = "none";
       document.getElementById("exp").style.display = "none";
       document.getElementById("projects").style.display = "none";
       document.getElementById("aff").style.display = "block";
@@ -220,7 +220,7 @@
         top: 5%;
       }
 
-      div.awards{
+      div.courses{
         display:none;
         position: relative;
         top: 5%;
@@ -250,6 +250,20 @@
         background-color:#0c2337;
       }
 
+      ::-webkit-scrollbar {
+        width: 10px;
+        padding-right:10px;
+      }
+      ::-webkit-scrollbar-track {
+        box-shadow: #ffffff;
+      }
+      ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 5px #0c2337;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ffffff;
+      }
+
       div.content{
         position: absolute;
         height: 60%;
@@ -257,7 +271,7 @@
         top:20%;
         left:17%;
         background-color:#cdc5b7;
-        overflow:hidden;
+        overflow:auto;
       }
 
       p.headd{
@@ -299,6 +313,8 @@
         display:  block;
         position: relative;
         top: 5%;
+        float:left;
+        margin-bottom: 50px;
       }
 
       div.skills{
@@ -307,7 +323,7 @@
         top: 5%;
       }
 
-      div.awards{
+      div.courses{
         display:none;
         position: relative;
         top: 5%;
@@ -428,10 +444,10 @@
 <body>
   <div class="content" onselectstart="return false">
     <div class="about_me" id="about_me">
-      <p class="headd">Profile</p>
-      <p>A hardworking fresh graduate who is passionate with work and has both the social skills, as exhibited in the different student organizations joined while taking undergraduate education, as well as the technical skills, such as proficiency in different programming languages</p>
+      <p class="headd">About Me<br/><br/><img src="images/profile.jpg" alt="profile_pic" style="width:150px;height:150px;"></p>
+      <p>My name is Aidee Criselle Peñamora, a BS Computer Engineering graduate from UP Diliman. I'm mostly interested in front end web development but I like learning new things, specially topics related to programming. I also have a lot of experience in object oriented programming with C++.</p>
       <p class="headd">Education</p>
-      <p>BS Computer Engineering<br/>University of the Philippines Diliman, Quezon City<br/>August 2016-August 2022
+      <p><strong>BS Computer Engineering</strong><br/>University of the Philippines Diliman, Quezon City<br/>August 2016-August 2022</p>
     </div>
     <div class="skills" id="skills">
       <p class="headd">Skills</p>
@@ -444,19 +460,22 @@
         <li>Effective Time Management</li>
       </ul>
     </div>
-    <div class="awards" id="awards">
-      <p class="headd">Awards</p>
-      <p class="subheadd">University Scholar</p>
-      <ul>
-        <li>2nd Sem, 2015-2016</li>
-      </ul>
-      <p class="subheadd">College Scholar</p>
-      <ul>
-        <li>1st Sem, 2016-2017</li>
-        <li>2nd Sem, 2016-2017</li>
-        <li>1st Sem, 2017-2018</li>
-        <li>2nd Sem, 2020-2021</li>
-      </ul>
+    <div class="courses" id="courses">
+      <p class="headd">Related Courses</p>
+      <p class="subheadd">EEE 11: Programming Fundamentals</p>
+      <p>Working principles of a computing machine; fundamental programming constructs; and software and hardware abstractions.</p>
+      <p class="subheadd">EEE 13: Programming Applications in Electrical and Electronics Engineering</p>
+      <p>Algorithm performance. System calls. Fundamental database concepts. Graphical user interface principles. Fundamental network programming.</p>
+      <p class="subheadd">EEE 105: Computer Organization</p>
+      <p>Instructor sets. Computer arithmetic. Datapath and control. Memory system organization and architecture. Interfacing and communication. Assembly language programming.</p>
+      <p class="subheadd">CoE 135: Operating Systems</p>
+      <p>Overview of operating systems. System calls. Process management. Threads. Scheduler. Interprocess communication and synchronization. Deadlock and starvation. Memory management. Virtual memory. I/O systems. File system.</p>
+      <p class="subheadd">CoE 113: Advanced Computer Organization</p>
+      <p>Instruction sets; central processor implementations; pipelining; hardwired and microprogrammed control; reduced instruction set computer (RISC) processors; datapaths; arithmetic and logic units (ALUs); memory.</p>
+      <p class="subheadd">CoE 133: Computer Systems Engineering I</p>
+      <p>History and overview of computer systems engineering; role of systems analyst; requirements analysis and elicitation; life cycles; project management; architectural design; implementation, testing, and maintenance issues.</p>
+      <p class="subheadd">CoE 134: Computer Systems Engineering II</p>
+      <p>Requirements analysis and elicitation. Architectural design. Implementation, testing and maintenance issues.</p>
     </div>
     <div class="exp" id="exp">
       <p class="headd">Employment History</p>
@@ -465,7 +484,13 @@
     </div>
     <div class="projects" id="projects">
       <p class="headd">Projects</p>
-      <p>TBA.</p>
+      <p style="text-align:center;"><img src="images/q-llect logo.png" style="height:100px;width:100px;"></p>
+      <p class="subheadd">Q-llect</p>
+      <ul>
+        <li>Link: <a href = "https://qllect.herokuapp.com/">qllect.herokuapp.com</a></li>
+        <li>Desc: A contact tracing web application made with Django as submitted as the output of a group project in CoE 134.</li>
+        <li>Contribution: I was responsible for coding the front end side of the application, which includes a responsive layout that should work for both desktop and mobile.</li>
+      </ul>
     </div>
     <div class="aff" id="aff">
       <p class="headd">Affiliations</p>
@@ -489,7 +514,7 @@
     <div class ="buttons" onselectstart="return false">
       <button onclick="go_about_me()" class = "button1">About Me</button>
       <button onclick="go_skills()" class = "button2">Skills</button>
-      <button onclick="go_awards()" class = "button3">Awards</button>
+      <button onclick="go_courses()" class = "button3">Courses</button>
       <button onclick="go_exp()" class = "button4">Experience</button>
       <button onclick="go_projects()" class = "button5">Projects</button>
       <button onclick="go_aff()" class = "button6">Affiliations</button>
