@@ -57,6 +57,23 @@
       document.getElementById("projects").style.display = "none";
       document.getElementById("aff").style.display = "block";
     }
+
+    function check_check(){
+      checkedd = document.getElementById("content_show").checked
+      block_change = document.getElementById("right_block");
+      block_change2 = document.getElementById("content");
+
+      if (checkedd == true){
+        block_change.style.height = "30%";
+        block_change.style.overflow = "auto";
+        block_change2.style.top = "30%";
+      }else{
+        block_change.style.height = "5%";
+        block_change.style.overflow = "hidden";
+        block_change2.style.top = "5%";
+      }
+    }
+
   </script>
 
 
@@ -68,19 +85,39 @@
 
     @media screen and (max-width: 640px){
       body{
+        background-color: #ffffff;
+      }
+
+      div.tribar{
+        display: block;
         color: #ffffff;
+        float:left;
+        height:10%;
+        width:10%;
+        margin-top:0%;
+        position: absolute;
+      }
+
+      label{
+        color: #ffffff;
+        font-size:200%;
+      }
+
+      .hidden-check{
+        position: absolute;
+        left: -100vw;
       }
 
       div.right_block{
-        position: absolute;
-        height: 30%;
+        position:absolute;
+        height: 5%;
         width: 100%;
         top: 0%;
-        left: 0%;
-        text-align: center;
-        font-family: Helvetica, Garamond;
+        left:0%;
+        text-align:center;
+        font-family: Helvetica, Garamind;
         background-color:#0c2337;
-        overflow:auto;
+        overflow:hidden;
       }
 
       h1{
@@ -168,9 +205,10 @@
         position: absolute;
         height: 70%;
         width: 100%;
-        top:30%;
+        top:5%;
         left:0%;
         overflow:auto;
+        background-color:#ffffff;
       }
 
       p.headd{
@@ -248,6 +286,10 @@
     @media screen and (min-width: 641px){
       body {
         background-color:#0c2337;
+      }
+
+      div.tribar{
+        display: none;
       }
 
       ::-webkit-scrollbar {
@@ -442,7 +484,7 @@
 </head>
 
 <body>
-  <div class="content" onselectstart="return false">
+  <div class="content" id="content" onselectstart="return false">
     <div class="about_me" id="about_me">
       <p class="headd">About Me<br/><br/><img src="images/profile.jpg" alt="profile_pic" style="width:150px;height:150px;"></p>
       <p>My name is Aidee Criselle Peñamora, a BS Computer Engineering graduate from UP Diliman. I'm mostly interested in front end web development but I like learning new things, specially topics related to programming. I also have a lot of experience in object oriented programming with C++.</p>
@@ -508,7 +550,7 @@
     </div>
   </div>
 
-  <div class="right_block">
+  <div class="right_block" id="right_block">
     <h1 onselectstart = "return false">Aidee Criselle Peñamora</h1>
 
     <div class ="buttons" onselectstart="return false">
@@ -524,6 +566,11 @@
       <a href = "https://github.com/avpenamora" class = "github"> github.com/avpenamora</a>
       <p class="email">Email me at aideecrisellep@gmail.com</p>
     </div>
+  </div>
+
+  <div class="tribar">
+    <label for="content_show">&#8801;</label>
+    <input type="checkbox" id="content_show" class="hidden-check" onclick="check_check()">
   </div>
 </body>
 </html>
